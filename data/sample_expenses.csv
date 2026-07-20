@@ -1,0 +1,11 @@
+﻿date,description,category,amount,payment_method
+2026-01-02,Tesco groceries,Groceries,45.20,Debit Card
+2026-01-03,Netflix subscription,Entertainment,12.99,Credit Card
+2026-01-04,Train ticket,Transport,8.50,Debit Card
+2026-01-05,Coffee,Food,3.80,Debit Card
+2026-01-07,Rent,Housing,950.00,Bank Transfer
+2026-01-08,Gym membership,Health,35.00,Debit Card
+2026-01-09,Uber ride,Transport,18.40,Credit Card
+2026-01-10,Restaurant,Food,42.00,Credit Card
+2026-01-11,Amazon order,Shopping,65.90,Credit Card
+2026-01-12,Electric bill,Utilities,74.30,Bank Transfer
