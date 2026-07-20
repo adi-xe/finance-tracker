@@ -1,5 +1,6 @@
 import streamlit as st
-import pandas as pd
+from src.data_loader import load_expenses
+from src.preprocessing import clean_expenses
 
 st.set_page_config(
     page_title="Personal Finance Tracker",
@@ -10,7 +11,8 @@ st.set_page_config(
 st.title("Personal Finance Dashboard")
 st.write("Track, visualize, and analyze your spending patterns.")
 
-df = pd.read_csv("data/sample_expenses.csv")
+df = load_expenses("data/sample_expenses.csv")
+df = clean_expenses(df)
 
-st.subheader("Raw Expense Data")
+st.subheader("Cleaned Expense Data")
 st.dataframe(df)
