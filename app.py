@@ -62,5 +62,19 @@ st.plotly_chart(monthly_spending_chart(df), use_container_width=True)
 st.subheader("Spending Clusters")
 st.plotly_chart(cluster_scatter_chart(df), use_container_width=True)
 
+st.subheader("Cluster Summary")
+
+cluster_summary = (
+    df.groupby("cluster")
+    .agg(
+        total_spending=("amount", "sum"),
+        average_spending=("amount", "mean"),
+        number_of_transactions=("amount", "count")
+    )
+    .reset_index()
+)
+
+st.dataframe(cluster_summary)
+
 st.subheader("Expense Data")
 st.dataframe(df)
