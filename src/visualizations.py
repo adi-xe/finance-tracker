@@ -53,3 +53,17 @@ def category_pie_chart(df: pd.DataFrame):
     )
 
     return fig
+
+
+def cluster_scatter_chart(df: pd.DataFrame):
+    fig = px.scatter(
+        df,
+        x="date",
+        y="amount",
+        color="cluster",
+        hover_data=["description", "category", "payment_method"],
+        title="Spending Clusters",
+        labels={"amount": "Amount (£)", "date": "Date", "cluster": "Cluster"}
+    )
+
+    return fig
